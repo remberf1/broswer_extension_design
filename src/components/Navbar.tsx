@@ -12,9 +12,9 @@ type NavbarProps = {
 
 const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
   return (
-    <nav className="bg-[color:var(--neutral-0)] dark:bg-[color:var(--neutral-700)] shadow rounded-2xl fixed top-10 left-5 right-5 z-50">
+    <nav className="bg-[color:var(--neutral-0)] dark:bg-[color:var(--neutral-700)] shadow rounded-2xl fixed top-10 md:left-15 md:right-15 z-50 right-5 left-5">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold text-gray-900 dark:text-white">
+        <div className="text-xl font-bold text-gray-900 dark:text-white 2xl:-ml-15">
           <img src={logo} alt="logo" />
         </div>
         <button
