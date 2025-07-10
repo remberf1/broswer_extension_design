@@ -1,6 +1,8 @@
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --neutral-900: hsl(227, 75%, 14%);
   --neutral-800: hsl(226, 25%, 17%);
@@ -13,11 +15,11 @@
 
   --red-400: hsl(3, 86%, 64%);
   --red-500: hsl(3, 71%, 56%);
-  --got-700: hsl(3, 77%, 44%);
+  --red-700: hsl(3, 77%, 44%);
 
   /* Button colors */
   --btn-bg: var(--red-400);
-  --btn-hover: var(--got-700);
+  --btn-hover: var(--red-700);
   --btn-bg-dark: var(--neutral-600);
   --btn-hover-dark: var(--neutral-700);
 }
