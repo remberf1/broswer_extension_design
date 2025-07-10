@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import Navbar from './components/Navbar.jsx';
-import ExtensionCard from './components/ExtenstionCard.jsx';
+import Navbar from './components/Navbar.js';
+import ExtensionCard from './components/ExtenstionCard.js';
 import extensionData from './data/data.json';
 
 function App() {
@@ -15,13 +15,13 @@ function App() {
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
 
-  const handleToggle = (index) => {
+  const handleToggle = (index : number) => {
     const updated = [...extensions];
     updated[index].enabled = !updated[index].enabled;
     setExtensions(updated);
   };
 
-  const handleRemove = (index) => {
+  const handleRemove = (index: number) => {
     const updated = [...extensions];
     updated.splice(index, 1);
     setExtensions(updated);
@@ -40,7 +40,7 @@ function App() {
     
   `;
 
-const isActiveBtn = (btn) =>
+const isActiveBtn = (btn : string) =>
   filter === btn
     ? 'bg-red-500 text-white hover:bg-red-600 focus:bg-red-600 focus:ring-2 focus:ring-red-500 focus:outline-none'
     : `bg-[color:var(--neutral-0)] text-[color:var(--neutral-700)]

@@ -1,10 +1,16 @@
-// Navbar.jsx
+// Navbar.tsx
 import React from 'react';
 import logo from '../assets/images/logo.svg';
 import moon from '../assets/images/icon-moon.svg';
 import sun from '../assets/images/icon-sun.svg';
 
-const Navbar = ({ darkMode, setDarkMode }) => {
+// ✅ Define prop types
+type NavbarProps = {
+  darkMode: boolean;
+  setDarkMode: (value: boolean) => void;
+};
+
+const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
   return (
     <nav className="bg-[color:var(--neutral-0)] dark:bg-[color:var(--neutral-700)] shadow rounded-2xl fixed top-10 left-5 right-5 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
